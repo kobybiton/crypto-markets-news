@@ -1,0 +1,73 @@
+include elements/_widget-list-social
+//- RD Navbar
+.rd-navbar-wrap
+  nav.rd-navbar.rd-navbar-inline(data-layout='rd-navbar-fixed' ,data-sm-layout='rd-navbar-fullwidth', data-lg-layout='rd-navbar-static')&attributes(rd_navbar_data_ajuster)
+    .rd-navbar-inner
+      //- RD Navbar Top part
+      .rd-navbar-top-part.text-sm-left.small
+        //- RD Calendar
+        span.date.veil.reveal-sm-block.rd-calendar
+          span.rdc-today_day
+          = '. '
+          span.rdc-today_month
+          = ' '
+          span.rdc-today_date
+          = ', '
+          span.rdc-today_fullyear
+        .rd-navbar-top-part-right
+          //- RD Navbar Search
+          .rd-navbar-search-toggle(data-rd-navbar-toggle='.rd-navbar-search-wrap')
+          .rd-navbar-search-wrap
+            .rd-navbar-search
+              form.rd-navbar-search-form(action='search.php', method='GET')
+                label.rd-navbar-search-form-input
+                  input(type='text', name='s', placeholder='I`m looking for....', autocomplete='off')
+                button.rd-navbar-search-form-submit(type='submit')
+              span.rd-navbar-live-search-results
+          .divider-vertical.divider-xs
+          .element-groups-xl-custom.user-forms
+            a(href="#", data-rd-navbar-toggle='.rd-navbar-login').rd-navbar-login-btn
+              span.icon.icon-sm.fa-unlock-alt.text-white.veil-sm
+              span.veil.reveal-sm-inline-block
+                | Login
+            //- Navbar login
+            .rd-navbar-login
+              form(action="#")
+                .form-group
+                  input(type="text" name="name" placeholder="Your name" class="form-control")
+                .form-group.offset-top-12
+                  input(type="password" name="pass" placeholder="Your password" class="form-control")
+                button(type="submit" class="btn btn-warning offset-top-12 text-normal")
+                  | Login
+            a(href="#", data-rd-navbar-toggle='.rd-navbar-register').rd-navbar-register-btn
+              span.icon.icon-sm.fa-user.text-white.veil-sm
+              span.veil.reveal-sm-inline-block
+                | Register
+            //- rd-navbar-register
+            .rd-navbar-register
+              form(action="#")
+                .form-group
+                  input(type="text" name="name" placeholder="Your name" class="form-control")
+                .form-group.offset-top-12
+                  input(type="password" name="pass" placeholder="Your password" class="form-control")
+                button(type="submit" class="btn btn-warning offset-top-12 text-normal")
+                  | Register
+
+      //- RD Navbar Panel
+      .rd-navbar-panel
+        //- RD Navbar Toggle
+        button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+          span
+      //- RD Navbar Wrap
+      .rd-navbar-nav-wrap
+        //- RD Navbar Brand
+        .rd-navbar-brand
+         a.brand-name(href='index.html')
+           span
+             |king
+           | news
+        //- RD Navbar Nav
+        include elements/_ui-navbar-nav
+        //Soc list
+        .rd-navbar-social-list
+          +list-social ('','','icon-default')

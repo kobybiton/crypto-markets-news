@@ -1,0 +1,50 @@
+mixin comments(commentsCount, commentsObj)
+  #comments.heading-divider
+    h3.heading-italic.text-light
+      = commentsCount
+      =' Responses'
+
+  -for(var i = 0; i < commentsObj.length; i++)
+    .comment.text-sm-left
+      .unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal.unit-xl-horizontal
+        .unit-left
+          img.max-width-none(src=commentsObj[i].img, width=commentsObj[i].imgWidth, height=commentsObj[i].imgSize, alt="")
+        .unit-body
+          .range.range-xs-justify.text-xs-left
+            .col-sm-8
+              ul.list-inline-md.font-accent.small.text-italic
+                li
+                  ='by '
+                  a(href=commentsObj[i].author.link)= commentsObj[i].author.name
+                li
+                  span.icon-time.text-primary
+                    = commentsObj[i].time
+            .col-sm-2.text-right
+              a(href="#reply").icon-reply
+          p= commentsObj[i].comment
+
+    //-Comments reply
+    if(commentsObj[i].reply.length)
+
+      -for(var j = 0; j < commentsObj[i].reply.length; j++)
+        .comment.comment-reply.text-sm-left
+          .unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal.unit-xl-horizontal
+            .unit-left
+              img.max-width-none(src=commentsObj[i].reply[j].img, width=commentsObj[i].reply[j].imgWidth, height=commentsObj[i].reply[j].imgSize, alt="")
+            .unit-body
+              .range.range-xs-justify.text-xs-left
+                .col-sm-8
+                  ul.list-inline-md.font-accent.small.text-italic
+                    li
+                      ='by '
+                      a(href=commentsObj[i].reply[j].author.link)= commentsObj[i].reply[j].author.name
+                    li
+                      span.icon-time.text-primary
+                        = commentsObj[i].reply[j].time
+                .col-sm-2.text-right
+                  a(href="#reply").icon-reply
+              p= commentsObj[i].reply[j].comment
+
+    if(i != commentsObj.length - 1)
+      .divider.divider-dashed
+

@@ -1,0 +1,19 @@
+mixin post-variant-4(categories, postLink, postTitle, titleClass, author, authorLink, time)
+  .post.post-variant-2.post-variant-4
+    ul
+      each name, href in categories
+        li
+          a(href=href)
+            span.label.label-warning=name
+    div
+      div(class=titleClass)
+        a.post-link(href=postLink)= postTitle
+    .post-meta.element-groups-custom.offset-top-12
+      a(href=authorLink ).post-meta-author
+        = author
+      div
+        time.post-meta-time(datetime="2016-06-06")= time
+    block
+    .post-bottom
+      +post-meta()
+        a(href=postLink).btn.btn-warning.text-normal Read-more

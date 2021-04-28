@@ -1,0 +1,119 @@
+include ../elements/_ui-post-variant-1
+include ../elements/_ui-post-variant-2
+include ../elements/_ui-post-variant-3
+include ../elements/_ui-post-meta
+include ../elements/_widget-list-social
+
+//- Sidebar
+.range
+  .cell-sm-8.cell-sm-preffix-2.cell-lg-12.cell-lg-preffix-0.cell-xs-push-1.cell-lg-push-1
+    .bg-gray-base.context-dark.section-top-15.section-bottom-30.inset-p-left-6.inset-p-right-6
+      h3.heading-italic.text-light Search
+      form(action="#").form-inline-flex.reveal-xs-flex
+        .form-group.offset-bottom-0
+          input(type="text", name="search1", placeholder="I'm looking for....").form-control
+        button(type="submit").btn.btn-warning.offset-xs-left-10.offset-top-12.offset-xs-top-0 Search
+
+  .cell-sm-8.cell-sm-preffix-2.cell-lg-12.cell-lg-preffix-0.cell-xs-push-7.cell-lg-push-2.text-center.text-lg-left
+    .bg-gray-light.section-top-15.section-bottom-30.inset-p-left-6.inset-p-right-6.offset-top-45.offset-xl-top-60
+      h3.heading-italic.text-light Follow us
+      p Read our latest news on any of these social networks!
+      //- Social list
+      +list-social ('','','icon-gray-base')
+      hr.divider.divider-dashed
+      h3.heading-italic.text-light Get latest news delivered daily!
+      p We will send you breaking news right to your inbox
+
+      //- RD Mailform
+      form.offset-top-20.rd-mailform-inline.rd-mailform.form-inline-flex.reveal-xs-flex(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+        .form-wrap.mfInput
+          input.form-input(id="subscribe-form-email",type='text', name='email', data-constraints="@Email @Required")
+          label.form-label(for="subscribe-form-email") Your E-mail
+        button.btn.btn-warning Subscribe
+
+  .cell-xs-12.cell-xs-push-3.cell-lg-push-3.offset-top-45
+    .heading-divider.offset-top45
+      h3.heading-italic.text-light Latest news
+    .range.offset-top-30.offset-md-top-60
+      .cell-sm-6.cell-lg-12
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-01.jpg", 150, 115, "", "post-default.html", 'Bradley Cooper’s "Twin" Causes Madness At Sundance Film Festival Opening', '', "h5 text-italic text-bold")
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+        hr.divider.divider-dashed
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-02.jpg", 150, 115, "", "post-with-video.html", 'This Concept Jet Could Get You From New York To London In Under 11 Minutes', '', "h5 text-bold", '')
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+        hr.divider.divider-dashed
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-03.jpg", 150, 115, "", "post-with-quote-2.html", '3 Ways To Conquer Your Winter Laziness', '', "h5 text-bold")
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+        hr.divider.divider-dashed.veil.reveal-lg-block
+
+      .cell-sm-6.cell-lg-12.offset-lg-top-30
+        .divider.divider-dashed.veil-sm
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-04.jpg", 150, 115, "", "post-with-quote.html", 'UN report investigates whether Saudis bombed Yemen', '', "h5 text-bold")
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+        hr.divider.divider-dashed
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-05.jpg", 150, 115, "", "post-with-audio.html", 'Greeks were warned - stop refugees wave, or we will kick you out', '', "h5 text-bold")
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+        hr.divider.divider-dashed
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-06.jpg", 150, 115, "", "post-with-slider.html", 'FED made a brand new, bold statement on banks', '', "h5 text-bold")
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+
+  .cell-xs-12.cell-xs-push-2.cell-lg-push-4.offset-top-45
+    .heading-divider
+      h3.heading-italic.text-light Recent posts
+    .range.offset-top-45
+      .cell-sm-6.cell-lg-12
+        //- Post-variant-1
+        +post-variant-1("images/sidebar-07.jpg", {"politics.html": "News"}, "post-with-slider.html", "Bill Maher & Macfarlene: ‘Serial Anti-Catholic Bigots’ - Catholic League", "h4 text-normal font-accent-2", 536, 411)
+          +post-meta()
+            div.element-groups-custom.veil.reveal-md-block
+              a(href="categories-grid.html").post-meta-author
+                | Brian Williamson
+              a(href="categories-grid.html").post-meta-time
+                time(datetime="2016-06-06") 2h ago
+        hr.divider.divider-dashed
+        //- Post-variant-1
+        +post-variant-1("images/sidebar-08.jpg", {"politics.html": "News"}, "post-with-audio.html", "Spotify aims to raise $500M in debt", "h4 text-normal font-accent-2", 536, 411)
+          +post-meta()
+            div.element-groups-custom.veil.reveal-md-block
+              a(href="categories-grid.html").post-meta-author
+                | Brian Williamson
+              a(href="categories-grid.html").post-meta-time
+                time(datetime="2016-06-06") 2h ago
+        hr.divider.divider-dashed.veil.reveal-lg-block
+
+      .cell-sm-6.cell-lg-12.offset-lg-top-30
+        //- Post-variant-1
+        +post-variant-1("images/sidebar-09.jpg", {"politics.html": "News"}, "post-with-quote.html", "ICC Judges Start Investigations of Russian Aggressive War in Georgia in 2008", "h4 text-normal font-accent-2", 536, 411)
+          +post-meta()
+            div.element-groups-custom.veil.reveal-md-block
+              a(href="categories-grid.html").post-meta-author
+                | Brian Williamson
+              a(href="categories-grid.html").post-meta-time
+                time(datetime="2016-06-06") 2h ago
+        hr.divider.divider-dashed
+        //- Post-variant-1
+        +post-variant-1("images/sidebar-10.jpg", {"politics.html": "News"}, "post-with-quote-2.html", "Michael Bloomberg Weighs on Independent Run For POTUS", "h4 text-normal font-accent-2", 536, 411)
+          +post-meta()
+            div.element-groups-custom.veil.reveal-md-block
+              a(href="categories-grid.html").post-meta-author
+                | Brian Williamson
+              a(href="categories-grid.html").post-meta-time
+                time(datetime="2016-06-06") 2h ago

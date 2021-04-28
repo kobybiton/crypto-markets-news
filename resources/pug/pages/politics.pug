@@ -1,0 +1,178 @@
+extends  ../_skeleton
+
+include ../elements/_ui-post-variant-1
+include ../elements/_ui-post-variant-2
+include ../elements/_ui-post-variant-3
+include ../elements/_ui-post-meta
+include ../elements/_ui_pagination
+
+block variables
+  - var activeIndex = 2
+  - var rd_navbar_data_ajuster = {"data-stick-up-offset" : "198", "data-md-layout":'rd-navbar-fullwidth', "data-lg-layout":'rd-navbar-static'}
+
+block title
+  title Politics - KingNews
+
+block page
+  //- Page Header
+  include ../_header-default
+
+  //- Page Content
+  main.page-content
+    section.section-top-50
+      .shell
+        .range
+          .cell-lg-6
+            .offset-lg-negative-right-26
+              +post-variant-1("images/politics-01.jpg", "", "post-default.html", "If Obama Had Governed Like This in 2009, He'd Be the Transformational President We Hoped For", "h1", "880", "662")
+                +post-meta()
+                  div
+                    a(href="politics.html").post-meta-time
+                      time(datetime="2016-06-06") 2h ago
+
+
+          .cell-lg-6.offset-top-12.offset-lg-top-0.offset-lg-negative-left-26
+            .range
+              .cell-sm-6
+                .offset-lg-negative-right-38.offset-sm-negative-right-23
+                  +post-variant-1("images/politics-02.jpg", "", "post-default.html", "How Russia filled the vacuum left by US withdrawal from the Middle East", "h5", "426", "327")
+                    +post-meta()
+                      div
+                        a(href="politics.html").post-meta-time
+                          time(datetime="2016-06-06") 2h ago
+                  +post-variant-1("images/politics-03.jpg", "", "post-default.html", "Rivals seize on Trump decision to skip Fox debate", "h5 text-italic", "426", "327")
+                    +post-meta()
+                      div
+                        a(href="politics.html").post-meta-time
+                          time(datetime="2016-06-06") 2h ago
+              .cell-sm-6.offset-top-12.offset-sm-top-0
+                .offset-lg-negative-left-14.offset-lg-negative-right-24.offset-sm-negative-left-23
+                  +post-variant-1("images/politics-04.jpg", "", "post-default.html", "Protesters claim Oregon refuge after Bundy arrest <span class='veil-lg reveal-xl-inline'>, but feds stand their ground</span>.", "h5", "426", "327")
+                    +post-meta()
+                      div
+                        a(href="politics.html").post-meta-time
+                          time(datetime="2016-06-06") 2h ago
+                  +post-variant-1("images/politics-05.jpg", "", "post-default.html", "UN report iinvestigates whether Saudis bombed Yemen", "h5", "426", "327")
+                    +post-meta()
+                      div
+                        a(href="politics.html").post-meta-time
+                          time(datetime="2016-06-06") 2h ago
+
+    section.section-top-26
+      .shell
+        .range.text-md-left
+          .cell-lg-8
+
+            .heading-divider
+              h2 Featured news
+
+            .range.offset-top-0
+              .text-sm-left.cell-xs-preffix-1.cell-xs-10.cell-sm-6.cell-sm-preffix-0.cell-md-4.offset-top-45.offset-sm-top-0
+                //- Post-variant-3
+                +post-variant-3("images/politics-06.jpg", '337px', '258px', "", "post-default.html", "Russia storms Syrian town hunting for pilot’s killer", '', "h5 text-bold")
+                  +post-meta()
+                    div
+                      a(href="politics.html").post-meta-time
+                        time(datetime="2016-06-06") 2h ago
+              .text-sm-left.cell-xs-preffix-1.cell-xs-10.cell-sm-6.cell-sm-preffix-0.cell-md-4.offset-top-45.offset-sm-top-0
+                //- Post-variant-3
+                +post-variant-3("images/politics-07.jpg", '337px', '258px', "", "post-default.html", "Report finds ISIS using Syrian dam to hide high-value prisoners", '', "h5 text-bold")
+                  +post-meta()
+                    div
+                      a(href="politics.html").post-meta-time
+                        time(datetime="2016-06-06") 2h ago
+              .text-sm-left.cell-xs-preffix-1.cell-xs-10.cell-sm-6.cell-sm-preffix-0.cell-md-4.offset-top-45.offset-md-top-0
+                //- Post-variant-3
+                +post-variant-3("images/politics-08.jpg", '337px', '258px', "", "post-default.html", "Sen. McCain assails Pentagon for relying on Russian rockets", '', "h5 text-bold")
+                  +post-meta()
+                    div
+                      a(href="politics.html").post-meta-time
+                        time(datetime="2016-06-06") 2h ago
+
+              .cell-xl-12.veil.reveal-md-block.offset-top-0
+                hr.divider.divider-dashed.offset-top-20
+                div.hidden
+
+              .text-sm-left.cell-xs-preffix-1.cell-xs-10.cell-sm-6.cell-sm-preffix-0.cell-md-4.offset-top-45.offset-md-top-0
+                //- Post-variant-3
+                +post-variant-3("images/politics-09.jpg", '337px', '258px', "", "post-default.html", "FBI going 'right to the source' in Clinton email probe", '', "h5 text-bold")
+                  +post-meta()
+                    div
+                      a(href="politics.html").post-meta-time
+                        time(datetime="2016-06-06") 2h ago
+              .text-sm-left.cell-xs-preffix-1.cell-xs-10.cell-sm-6.cell-sm-preffix-0.cell-md-4.offset-top-45.offset-md-top-0
+                //- Post-variant-3
+                +post-variant-3("images/politics-10.jpg", '337px', '258px', "", "post-default.html", "GOP establishment still freaking that Trump or Cruz may win", '', "h5 text-bold")
+                  +post-meta()
+                    div
+                      a(href="politics.html").post-meta-time
+                        time(datetime="2016-06-06") 2h ago
+              .text-sm-left.cell-xs-preffix-1.cell-xs-10.cell-sm-6.cell-sm-preffix-0.cell-md-4.offset-top-45.offset-md-top-0
+                //- Post-variant-3
+                +post-variant-3("images/politics-11.jpg", '337px', '258px', "", "post-default.html", "Trump 2012: Rips candidates skipping debate, praises Kelly", '', "h5 text-bold")
+                  +post-meta()
+                    div
+                      a(href="politics.html").post-meta-time
+                        time(datetime="2016-06-06") 2h ago
+
+              .cell-xl-12.veil.reveal-md-block.offset-top-0
+                hr.divider.divider-dashed.offset-top-20
+                div.hidden
+
+              .text-sm-left.cell-xs-preffix-1.cell-xs-10.cell-sm-6.cell-sm-preffix-0.cell-md-4.offset-top-45.offset-md-top-0
+                //- Post-variant-3
+                +post-variant-3("images/politics-12.jpg", '337px', '258px', "", "post-default.html", "Bloomberg bid could shake up 2016 race – would it make a difference?", '', "h5 text-bold")
+                  +post-meta()
+                    div
+                      a(href="politics.html").post-meta-time
+                        time(datetime="2016-06-06") 2h ago
+              .text-sm-left.cell-xs-preffix-1.cell-xs-10.cell-sm-6.cell-sm-preffix-0.cell-md-4.offset-top-45.offset-md-top-0
+                //- Post-variant-3
+                +post-variant-3("images/politics-13.jpg", '337px', '258px', "", "post-default.html", "US troops may stay in Afghanistan for decades to come", '', "h5 text-bold")
+                  +post-meta()
+                    div
+                      a(href="politics.html").post-meta-time
+                        time(datetime="2016-06-06") 2h ago
+              .text-sm-left.cell-xs-preffix-1.cell-xs-10.cell-sm-6.cell-sm-preffix-0.cell-md-4.offset-top-45.offset-md-top-0
+                //- Post-variant-3
+                +post-variant-3("images/politics-14.jpg", '337px', '258px', "", "post-default.html", "Gov. Scott: Jobs the most important issue for GOP candidates", '', "h5 text-bold")
+                  +post-meta()
+                    div
+                      a(href="politics.html").post-meta-time
+                        time(datetime="2016-06-06") 2h ago
+
+            hr.divider.divider-dashed.offset-top-25
+
+            +pagination(
+              '',
+              [
+                {
+                  "link": '#',
+                  "active": "true"
+                },
+                {
+                  "link": '#'
+                },
+                {
+                  "link": '#'
+                },
+                {
+                  "link": '#'
+                },
+                {
+                  "link": '#'
+                },
+                {
+                  "link": '#',
+                  "title": "10"
+                }
+              ],
+              '#'
+            )
+
+          .cell-lg-4.offset-top-36
+            include ../elements/_ui_sidebar
+
+
+  //- Page Footer
+  include ../_footer-default

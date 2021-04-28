@@ -1,0 +1,44 @@
+extends  ../_skeleton
+
+include ../elements/_ui_post-tags
+include ../elements/_ui_post-author
+include ../elements/_ui_post-prev-next
+include ../elements/_ui_comments
+include ../elements/_widget-list-social
+
+block variables
+  - var activeIndex = 1
+  - var rd_navbar_data_ajuster = {"data-stick-up-offset" : "198", "data-md-layout":'rd-navbar-fullwidth', "data-lg-layout":'rd-navbar-static'}
+
+block title
+  title 404
+
+block page
+  //- Page Header
+  include ../_header-default
+
+  //- Page Content
+  main.page-404.page-content
+    section.section-top-50
+      .shell
+        .range
+          .cell-lg-8
+            h1.text-regular.font-accent.text-primary.text-italic
+              span.big 404
+            h1 The page not found.
+            a(href="index.html").btn.btn-warning.offset-top-25 Visit home page
+
+            hr.divider.divider-dashed.offset-top-60
+
+            p.offset-top-45 Unfortunately the page you were looking for could not be found. Maybe search can help.
+            form.offset-top-25(action="#").form-inline-flex.reveal-xs-flex.rd-mailform-gray-light-skin
+              .form-group.offset-bottom-0
+                input(type="text", name="search1", placeholder="I'm looking for....").form-control
+              button(type="submit").btn.btn-warning.offset-xs-left-10.offset-top-12.offset-xs-top-0 Search
+
+
+          .cell-lg-4.offset-top-45.offset-lg-top-36.cell-lg-push-2.text-md-left
+            include ../elements/_ui_sidebar
+
+  //- Page Footer
+  include ../_footer-default

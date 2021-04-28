@@ -1,0 +1,19 @@
+mixin post-variant-5(categories, postLink, postTitle, titleClass, authorName, authorLink, time)
+  .post.post-variant-1.post-variant-5
+    .post-inner
+      block
+      .post-caption
+        ul
+          each name, href in categories
+            li
+              a(href=href)
+                span.label.label-warning=name
+        div
+          div(class=titleClass)
+            a(href=postLink)= postTitle
+          +post-meta()
+            div.element-groups-custom.veil.reveal-md-block
+              a(href=authorLink).post-meta-author
+                =authorName
+              a(href="categories-list.html")
+                time.post-meta-time(datetime="2016-06-06")= time

@@ -1,0 +1,10 @@
+mixin post-author(image, imageWidth, imageHeight, authorLink, authorName, authorDescription)
+  .bg-gray-base.context-dark.section-30.inset-left-30.inset-right-30.text-sm-left.offset-top-15
+    .unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal.unit-xl-horizontal
+      .unit-left
+        img.post-image.max-width-none(src=image, width=imageWidth, height=imageHeight, alt="")
+      .unit-body
+        h3.heading-italic.text-light.offset-sm-top-28
+          ='Written by '
+          a(href=authorLink)= authorName
+        p= authorDescription

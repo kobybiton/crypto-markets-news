@@ -1,0 +1,189 @@
+extends  ../_skeleton
+
+include ../elements/_ui-post-variant-4
+include ../elements/_ui-post-variant-5
+include ../elements/_ui-post-meta
+include ../elements/_ui_pagination
+include ../elements/_ui-post-variant-1
+
+
+
+block variables
+  - var activeIndex = 1
+  - var rd_navbar_data_ajuster = {"data-stick-up-offset" : "198", "data-md-layout":'rd-navbar-fullwidth', "data-lg-layout":'rd-navbar-static'}
+
+block title
+  title Categories grid - KingNews
+
+block page
+  //- Page Header
+  include ../_header-default
+
+
+  //- Page Content
+  main.page-content
+
+    .shell
+      +breadcrambs(
+      'Categories grid',
+      {
+        0: {
+          "title": "Home",
+          "href": "./"
+        },
+        1: {
+          "title": "Categories grid"
+        }
+      }
+      )
+    section.offset-top-25
+      .shell
+        .range.text-md-left
+          .cell-sm-8.cell-sm-preffix-2.cell-lg-8.cell-lg-preffix-0
+            .heading-divider
+              h2 Politics
+
+            .range
+              .cell-lg-6
+                //- Post-variant-1
+                +post-variant-1("images/categories-grid-01.jpg", {"politics.html": "News"}, "post-default.html", "Bill Maher & Macfarlene: ‘Serial Anti-Catholic Bigots’ - Catholic League", "h4 text-normal font-accent-2", 536, 411)
+                  +post-meta()
+                   div.element-groups-custom.veil.reveal-md-block
+                     a(href="#").post-meta-author
+                       | Brian Williamson
+                     a(href="#").post-meta-time
+                       time(datetime="2016-06-06") 2h ago
+
+              .cell-lg-6.offset-top-60.offset-lg-top-0
+                //- Post variant-4
+                +post-variant-4({"politics.html": "News"}, "post-default.html", "Bill Maher & Macfarlene: ‘Serial Anti-Catholic Bigots’ - Catholic League", "h4 text-normal font-accent-2", 'Brian Williamson', 'post-default.html', '2h ago')
+                  p
+                    | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start...
+
+              .cell-lg-6.offset-top-60
+                //- Post-variant-5
+                +post-variant-5({"politics.html": "News"}, "post-with-slider.html", "3 Ways To Conquer Your Winter Laziness", "h4 text-normal font-accent-2", 'Brian Williamson', 'post-with-slider.html', '2h ago' )
+                  //- Owl Carousel
+                  .owl-carousel(data-mouse-drag="false" data-animation-out='fadeOut' data-items='1', data-loop='true' data-nav="true")
+                    img(alt="", src="images/categories-list-02.jpg", height="411", width="536")
+                    img(alt="", src="images/categories-list-01.jpg", height="411", width="536")
+                    img(alt="", src="images/categories-list-03.jpg", height="411", width="536")
+
+              .cell-lg-6.offset-top-60
+                div
+                  //- Post-variant-1
+                  +post-variant-1("images/categories-list-01.jpg",{"politics.html": "News"}, "post-with-video.html", "Ways To Conquer Your Winter Laziness", "h4 text-normal font-accent-2", 536, 411)
+                    +post-meta()
+                      div.element-groups-custom.veil.reveal-md-block
+                        a(href="categories-list.html").post-meta-author
+                          | Brian Williamson
+                        a(href="categories-masonry.html").post-meta-time
+                          time(datetime="2016-06-06") 2h ago
+
+              .cell-lg-6.offset-top-60
+                .bg-gray-base.context-dark.post.post-variant-1.post-with-quote.reveal-block
+                  blockquote.quote.quote-centered
+                    p
+                      a(href="post-with-quote-2.html")
+                        q
+                          | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                    p
+                      cite
+                        | Brian Williamson
+                  +post-meta()
+                    div.element-groups-custom
+                      a(href='post-with-quote-2.html').post-meta-author
+                        | Brian Williamson
+                      a(href="#").post-meta-time
+                        time(datetime="2016-06-06") 2h ago
+
+              .cell-lg-6.offset-top-60
+                //-Post variant-4
+                +post-variant-4({"politics.html": "News"}, "post-with-audio.html", "Bill Maher & Macfarlene: ‘Serial Anti-Catholic Bigots’ - Catholic League", "h4 text-normal font-accent-2", 'Brian Williamson', 'post-with-audio.html', '2h ago')
+                  audio.offset-top-20(controls="")
+                    source(src="audio/audio-01.mp3" type="audio/mpeg")
+                    | Your browser does not support the audio element.
+
+              .cell-lg-6.offset-top-60
+                .post.post-variant-1
+                  .post-inner
+                    img.img-responsive.post-image(src="images/categories-grid-01.jpg", width='536', height='411', alt="")
+                    a(href="http://www.templatemonster.com/").h5.post-caption-link-center.veil.reveal-xl-inline-block
+                      span.veil.reveal-xs-inline http://www.
+                      | templatemonster.com
+                      span.veil.reveal-xs-inline /
+                    .post-caption
+                      ul
+                          li
+                            a(href="politics.html")
+                              span.label.label-warning News
+                      div
+                        div(class="h4 text-normal font-accent-2")
+                          a(href="post-with-link.html") 3 Ways To Conquer Your Winter Laziness
+                        +post-meta()
+                          div.element-groups-custom.veil.reveal-md-block
+                            a(href="post-with-link.html").post-meta-author
+                              | Brian Williamson
+                            a(href="#").post-meta-time
+                              time(datetime="2016-06-06") 2h ago
+
+              .cell-lg-6.offset-top-60
+                //-Post variant-4
+                +post-variant-4({}, "post-with-twitter.html", "Twitter Status Post", "h4 text-normal font-accent-2", 'Brian Williamson', '#', '2h ago')
+                  script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
+                  blockquote.twitter-tweet(data-lang='en')
+                    p(lang='en', dir='ltr')
+                      | It seems the Best HTML Visual Page Builder
+                      a(href='https://t.co/m4P4yuZiVn') https://t.co/m4P4yuZiVn
+                    | — ZEMEZ (@ZEMEZLab)
+                    a(href='https://twitter.com/ZEMEZLab/status/989856571873210369?ref_src=twsrc%5Etfw') 27 апреля 2018 г.
+                  script(async='', src='https://platform.twitter.com/widgets.js', charset='utf-8')
+
+
+              .cell-lg-6.offset-top-60
+                //-Post variant-4
+                +post-variant-4({}, "post-with-facebook.html", "Facebook Status Post", "h4 text-normal font-accent-2", 'Brian Williamson', '#', '2h ago')
+                  div
+                    .fb-post(data-href='https://www.facebook.com/TemplateMonster/posts/10153993302324376', data-width='500')
+                      .fb-xfbml-parse-ignore
+                        blockquote(cite='https://www.facebook.com/TemplateMonster/posts/10153993302324376')
+                          p
+                            | Several Reasons Why #PrestaShop is Your Best Choice for an Online Shop goo.gl/E4YsHU
+                          | Опубликовано
+                          a(href='https://www.facebook.com/TemplateMonster/') TemplateMonster
+                          a(href='https://www.facebook.com/TemplateMonster/posts/10153993302324376') 7 апреля 2016 г.
+
+            hr.divider.divider-dashed.offset-top-25
+
+            +pagination(
+            '',
+            [
+              {
+                "link": '#',
+                "active": "true"
+              },
+              {
+                "link": '#'
+              },
+              {
+                "link": '#'
+              },
+              {
+                "link": '#'
+              },
+              {
+                "link": '#'
+              },
+              {
+                "link": '#',
+                "title": "10"
+              }
+            ],
+            '#'
+            )
+          .cell-lg-4.offset-top-45.offset-lg-top-36
+            include ../elements/_ui_sidebar
+
+
+  //- Page Footer
+  include ../_footer-default

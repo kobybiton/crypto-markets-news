@@ -1,0 +1,6 @@
+<?php
+
+$coin = 'USD';
+$symbol = '$';
+
+?>

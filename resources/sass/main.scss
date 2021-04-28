@@ -1,0 +1,57 @@
+html {
+    .page{
+        .offset-xl-top-60, .offset-top-36  {
+            margin-top: 0;
+        }
+    }
+
+    .container-fluid {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+ul.rd-navbar-nav {
+   li:first-letter {
+       text-transform: uppercase;
+   }
+}
+
+#articles {
+    height: 866px;
+    overflow: auto;
+}
+
+.fa-user {
+    margin-right: 10px;
+}
+
+.unavailable-data {
+    background-image: url('../images/errorPageCMN.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 508px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.st-btn {
+    display: inline-block !important;
+}
+
+.sidebar {
+
+    .st-btn {
+        background-color: #ccc !important;
+    }
+}
+
+.sharethis-inline-share-buttons {
+    margin-top: 50px;
+}
+
+.btn {
+    cursor: pointer;
+}

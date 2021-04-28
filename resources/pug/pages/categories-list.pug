@@ -1,0 +1,316 @@
+extends  ../_skeleton
+
+include ../elements/_ui_pagination
+include ../elements/_ui-post-meta
+
+block variables
+  - var activeIndex = 1
+  - var rd_navbar_data_ajuster = {"data-stick-up-offset" : "198", "data-md-layout":'rd-navbar-fullwidth', "data-lg-layout":'rd-navbar-static'}
+
+block title
+  title Categories list - KingNews
+
+block page
+  //- Page Header
+  include ../_header-default
+
+  //- Page Content
+  main.page-content
+    .shell
+      +breadcrambs(
+      'Categories list',
+      {
+        0: {
+          "title": "Home",
+          "href": "./"
+        },
+        1: {
+          "title": "Categories list"
+        }
+      }
+      )
+    section.section-top-26
+      .shell
+        .range.text-md-left
+          .cell-lg-8
+            .heading-divider
+              h2 Politics
+            //- Post
+            .offset-top-45.range.range-sm-center.range-lg-left.post.post-variant-2
+              .cell-sm-10.cell-md-8.cell-lg-12.cell-xl-6
+                .post-inner
+                  img.img-responsive.post-image.reveal-inline-block(alt="", src="images/categories-list-01.jpg", height="411", width="536")
+                  .post-caption.post-caption-lg
+                    ul
+                      li
+                        a(href="categories-grid.html")
+                          span.label.label-warning World
+              .cell-sm-10.cell-md-8.cell-lg-12.cell-xl-6.offset-top-36.offset-xl-top-0
+                div.h4.text-normal.font-accent-2
+                  a.post-link(href='post-default.html')
+                    | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                div.post-meta.element-groups-custom.offset-top-12
+                  a(href="categories-grid.html").post-meta-author
+                    | Brian Williamson
+                  a(href="categories-masonry.html").post-meta-time
+                    time(datetime="2016-06-06") 2h ago
+                  a(href="post-default.html#comments").post-meta-comment 15 Comments
+                p.
+                  When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+                .reveal-xs-flex.range-xs-middle.range-xs-justify.offset-top-25
+                  a(href="post-default.html").btn.btn-warning Read more
+                  div.veil.reveal-xs-block
+                    +post-meta()
+
+            hr.divider.divider-dashed
+
+            //- Post
+            .offset-top-36.post.post-variant-2
+              a(href="politics.html")
+                span.label.label-warning World
+              .offset-top-12
+                div.h4.text-normal.font-accent-2
+                  a.post-link(href='post-default.html')
+                    | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                div.post-meta.element-groups-custom.offset-top-12
+                  a(href="categories-grid.html").post-meta-author
+                    | Brian Williamson
+                  a(href="categories-masonry.html").post-meta-time
+                    time(datetime="2016-06-06") 2h ago
+                  a(href="post-default.html#comments").post-meta-comment 15 Comments
+                p.
+                  When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+                .reveal-xs-flex.range-xs-middle.range-xs-justify.offset-top-25
+                  a(href="post-default.html").btn.btn-warning Read more
+                  div.veil.reveal-xs-block
+                    +post-meta()
+
+            hr.divider.divider-dashed
+
+            //- Post
+            .offset-top-25.range.range-sm-center.range-lg-left.post.post-variant-2
+              .cell-sm-10.cell-md-8.cell-lg-12.cell-xl-6
+                .post-inner.reveal-block
+                  //- Owl Carousel
+                  .owl-carousel(data-mouse-drag="false" data-animation-out='fadeOut' data-items='1', data-loop='true' data-nav="true")
+                    img(alt="", src="images/categories-list-01.jpg", height="411", width="536")
+                    img(alt="", src="images/categories-list-02.jpg", height="411", width="536")
+                    img(alt="", src="images/categories-list-03.jpg", height="411", width="536")
+                  .post-caption.post-caption-lg
+                    ul
+                      li
+                        a(href="politics.html")
+                          span.label.label-warning World
+              .cell-sm-10.cell-md-8.cell-lg-12.cell-xl-6.offset-top-36.offset-xl-top-0
+                div.h4.text-normal.font-accent-2
+                  a.post-link(href='post-with-slider.html')
+                    | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                div.post-meta.element-groups-custom.offset-top-12
+                  a(href="categories-grid.html").post-meta-author
+                    | Brian Williamson
+                  a(href="categories-masonry.html").post-meta-time
+                    time(datetime="2016-06-06") 2h ago
+                  a(href="post-with-slider.html#comments").post-meta-comment 15 Comments
+                p.
+                  When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+                .reveal-xs-flex.range-xs-middle.range-xs-justify.offset-top-25
+                  a(href="post-with-slider.html").btn.btn-warning Read more
+                  div.veil.reveal-xs-block
+                    +post-meta()
+
+            hr.divider.divider-dashed
+
+            //- Post
+            .offset-top-36.post.post-variant-2
+              .bg-gray-base.context-dark.offset-top-45.inset-p-right-15.inset-p-left-15.section-50.section-md-top-110.section-md-bottom-125
+                blockquote.quote.quote-centered
+                  p
+                    a(href="post-with-quote-2.html")
+                      q
+                        | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                  p
+                    cite
+                      | Brian Williamson
+              div.reveal-xs-flex.range-xs-middle.range-xs-justify
+                +post-meta()
+                  div.post-meta.element-groups-custom.offset-top-12
+                    a(href="categories-grid.html").post-meta-author
+                      | Brian Williamson
+                    a(href="categories-masonry.html").post-meta-time
+                      time(datetime="2016-06-06") 2h ago
+                    a(href="post-with-quote-2.html#comments").post-meta-comment 15 Comments
+
+            hr.divider.divider-dashed.offset-top-12
+            //- Post
+            .offset-top-25.range.range-sm-center.range-lg-left.post.post-variant-2
+              .cell-sm-10.cell-md-8.cell-lg-12.cell-xl-6
+                .post-inner
+                  .embed-responsive.embed-responsive-16by9.box-shadow-light-large
+                    iframe.embed-responsive-item(src="//www.youtube.com/embed/2a01Rg2g2Z8")
+              .cell-sm-10.cell-md-8.cell-lg-12.cell-xl-6.offset-top-25.offset-xl-top-0
+                div.h4.text-normal.font-accent-2
+                  a.post-link(href='post-with-video.html')
+                    | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                div.post-meta.element-groups-custom.offset-top-12
+                  a(href="categories-grid.html").post-meta-author
+                    | Brian Williamson
+                  a(href="categories-masonry.html").post-meta-time
+                    time(datetime="2016-06-06") 2h ago
+                  a(href="post-with-video.html#comments").post-meta-comment 15 Comments
+                p.
+                  When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+                .reveal-xs-flex.range-xs-middle.range-xs-justify.offset-top-25
+                  a(href="post-with-video.html").btn.btn-warning Read more
+                  div.veil.reveal-xs-block
+                    +post-meta()
+
+            hr.divider.divider-dashed
+
+            //- Post
+            .offset-top-36.post.post-variant-2
+              .post-inner
+                img.img-100p.img-responsive.post-image.reveal-inline-block(alt="", src="images/categories-list-04.jpg", height="411", width="1132")
+                a(href="http://www.zemez.io/").h5.post-caption-link-center
+                  span.veil.reveal-xs-inline http://www.
+                  | zemez.io
+                  span.veil.reveal-xs-inline /
+                .post-caption.post-caption-lg.veil.reveal-sm-block
+                  ul
+                    li
+                      a(href="politics.html")
+                        span.label.label-warning World
+              .offset-top-25
+                div.h4.text-normal.font-accent-2
+                  a.post-link(href='post-with-link.html')
+                    | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                div.post-meta.element-groups-custom.offset-top-12
+                  a(href="categories-grid.html").post-meta-author
+                    | Brian Williamson
+                  a(href="categories-masonry.html").post-meta-time
+                    time(datetime="2016-06-06") 2h ago
+                  a(href="post-with-link.html#comments").post-meta-comment 15 Comments
+                p.
+                  When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+                .reveal-xs-flex.range-xs-middle.range-xs-justify.offset-top-25
+                  a(href="post-with-link.html").btn.btn-warning Read more
+                  div.veil.reveal-xs-block
+                    +post-meta()
+
+            hr.divider.divider-dashed
+
+            //- Post
+            .offset-top-36.post.post-variant-2
+              a(href="politics.html")
+                span.label.label-warning World
+              .offset-top-12
+                div.h4.text-normal.font-accent-2
+                  a.post-link(href='post-with-audio.html')
+                    | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                div.post-meta.element-groups-custom.offset-top-12
+                  a(href="categories-grid.html").post-meta-author
+                    | Brian Williamson
+                  a(href="categories-masonry.html").post-meta-time
+                    time(datetime="2016-06-06") 2h ago
+                  a(href="post-with-audio.html#comments").post-meta-comment 15 Comments
+                audio.offset-top-12(controls="")
+                  source(src="audio/audio-01.mp3" type="audio/mpeg")
+                  | Your browser does not support the audio element.
+                p.
+                  When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+                .reveal-xs-flex.range-xs-middle.range-xs-justify.offset-top-25
+                  a(href="post-with-audio.html").btn.btn-warning Read more
+                  div.veil.reveal-xs-block
+                    +post-meta()
+
+            hr.divider.divider-dashed
+
+            //- Post
+            .offset-top-36.post.post-variant-2.post-twitter-left
+              a(href="politics.html")
+                span.label.label-warning World
+              .offset-top-12
+                div.h4.text-normal.font-accent-2
+                  a.post-link(href='post-with-twitter.html')
+                    | Twitter Status Post
+                div.post-meta.element-groups-custom.offset-top-12
+                  a(href="categories-grid.html").post-meta-author
+                    | Brian Williamson
+                  a(href="categories-masonry.html").post-meta-time
+                    time(datetime="2016-06-06") 2h ago
+                  a(href="post-with-twitter.html#comments").post-meta-comment 15 Comments
+                script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
+                blockquote.twitter-tweet(data-lang='en')
+                  p(lang='en', dir='ltr')
+                    | It seems the Best HTML Visual Page Builder
+                    a(href='https://t.co/m4P4yuZiVn') https://t.co/m4P4yuZiVn
+                  | — ZEMEZ (@ZEMEZLab)
+                  a(href='https://twitter.com/ZEMEZLab/status/989856571873210369?ref_src=twsrc%5Etfw') 27 апреля 2018 г.
+                script(async='', src='https://platform.twitter.com/widgets.js', charset='utf-8')
+
+                .reveal-xs-flex.range-xs-middle.range-xs-right
+                  div.veil.reveal-xs-block
+                    +post-meta()
+
+            hr.divider.divider-dashed.offset-top-25
+
+            //- Post
+            .offset-top-36.post.post-variant-2
+              a(href="politics.html")
+                span.label.label-warning World
+              .offset-top-12
+                div.h4.text-normal.font-accent-2
+                  a.post-link(href='post-with-facebook.html')
+                    | Facebook Status Post
+                div.post-meta.element-groups-custom.offset-top-12
+                  a(href="categories-grid.html").post-meta-author
+                    | Brian Williamson
+                  a(href="categories-masonry.html").post-meta-time
+                    time(datetime="2016-06-06") 2h ago
+                  a(href="post-with-facebook.html#comments").post-meta-comment 15 Comments
+                .fb-root.offset-top-25
+                  .fb-post(data-href='https://www.facebook.com/TemplateMonster/posts/10153993302324376', data-width='500')
+                    .fb-xfbml-parse-ignore
+                      blockquote(cite='https://www.facebook.com/TemplateMonster/posts/10153993302324376')
+                        p
+                          | Several Reasons Why #PrestaShop is Your Best Choice for an Online Shop goo.gl/E4YsHU
+                        | Опубликовано
+                        a(href='https://www.facebook.com/TemplateMonster/') TemplateMonster
+                        a(href='https://www.facebook.com/TemplateMonster/posts/10153993302324376') 7 апреля 2016 г.
+
+                .reveal-xs-flex.range-xs-middle.range-xs-right
+                  div.veil.reveal-xs-block
+                    +post-meta()
+
+            hr.divider.divider-dashed.offset-top-25
+            +pagination(
+            '',
+            [
+              {
+                "link": '#',
+                "active": "true"
+              },
+              {
+                "link": '#'
+              },
+              {
+                "link": '#'
+              },
+              {
+                "link": '#'
+              },
+              {
+                "link": '#'
+              },
+              {
+                "link": '#',
+                "title": "10"
+              }
+            ],
+            '#'
+            )
+          .cell-lg-4.offset-top-45.offset-lg-top-36
+            include ../elements/_ui_sidebar
+
+
+  //- Page Footer
+  include ../_footer-default

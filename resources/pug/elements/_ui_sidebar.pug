@@ -1,0 +1,221 @@
+include ../elements/_ui-post-variant-1
+include ../elements/_ui-post-variant-2
+include ../elements/_ui-post-variant-3
+include ../elements/_ui-post-meta
+include ../elements/_widget-list-social
+
+//- Sidebar
+.range
+  .cell-sm-8.cell-sm-preffix-2.cell-lg-12.cell-lg-preffix-0.cell-xs-push-1.cell-lg-push-1
+    .bg-gray-base.context-dark.section-top-15.section-bottom-30.inset-p-left-6.inset-p-right-6
+      h3.heading-italic.text-light Search
+      form(action="#").form-inline-flex.reveal-xs-flex
+        .form-group.offset-bottom-0
+          input(type="text", name="search1", placeholder="I'm looking for....").form-control
+        button(type="submit").btn.btn-warning.offset-xs-left-10.offset-top-12.offset-xs-top-0 Search
+
+  .cell-sm-8.cell-sm-preffix-2.cell-lg-12.cell-lg-preffix-0.cell-xs-push-7.cell-lg-push-2.text-center.text-lg-left
+    .bg-gray-light.section-top-15.section-bottom-30.inset-p-left-6.inset-p-right-6.offset-top-45.offset-xl-top-60
+      h3.heading-italic.text-light Follow us
+      p Read our latest news on any of these social networks!
+      //- Social list
+      +list-social ('','','icon-gray-base')
+      hr.divider.divider-dashed
+      h3.heading-italic.text-light Get latest news delivered daily!
+      p We will send you breaking news right to your inbox
+
+      //- RD Mailform
+      form.offset-top-20.rd-mailform-inline.rd-mailform.form-inline-flex.reveal-xs-flex(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+        .form-wrap.mfInput
+          input.form-input(id="subscribe-form-email",type='text', name='email', data-constraints="@Email @Required")
+          label.form-label(for="subscribe-form-email") Your E-mail
+        button.btn.btn-warning Subscribe
+      //- Rd Mailform result field
+      .rd-mailform-validate
+
+  .cell-xs-12.cell-xs-push-3.cell-lg-push-3.offset-top-45
+    .heading-divider.offset-top45
+      h3.heading-italic.text-light Latest news
+    .range.offset-top-30.offset-md-top-60
+      .cell-sm-6.cell-lg-12
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-01.jpg", 150, 115, "", "post-default.html", 'Bradley Cooper’s "Twin" Causes Madness At Sundance Film Festival Opening', '', "h5 text-italic text-bold")
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+        hr.divider.divider-dashed
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-02.jpg", 150, 115, "", "post-with-video.html", 'This Concept Jet Could Get You From New York To London In Under 11 Minutes', '', "h5 text-bold", '')
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+        hr.divider.divider-dashed
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-03.jpg", 150, 115, "", "post-with-quote-2.html", '3 Ways To Conquer Your Winter Laziness', '', "h5 text-bold")
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+        hr.divider.divider-dashed.veil.reveal-lg-block
+
+      .cell-sm-6.cell-lg-12.offset-lg-top-30
+        .divider.divider-dashed.veil-sm
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-04.jpg", 150, 115, "", "post-with-quote.html", 'UN report investigates whether Saudis bombed Yemen', '', "h5 text-bold")
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+        hr.divider.divider-dashed
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-05.jpg", 150, 115, "", "post-with-audio.html", 'Greeks were warned - stop refugees wave, or we will kick you out', '', "h5 text-bold")
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+        hr.divider.divider-dashed
+        //- Post-variant-2
+        +post-variant-2("images/sidebar-06.jpg", 150, 115, "", "post-with-slider.html", 'FED made a brand new, bold statement on banks', '', "h5 text-bold")
+          div.post-meta
+            a(href="categories-list.html").post-meta-time
+              time(datetime="2016-06-06") Jan. 20, 2016
+
+  .cell-xs-12.cell-xs-push-2.cell-lg-push-4.offset-top-45
+    .heading-divider
+      h3.heading-italic.text-light Recent posts
+    .range.offset-top-45
+      .cell-sm-6.cell-lg-12
+        //- Post-variant-1
+        +post-variant-1("images/sidebar-07.jpg", {"politics.html": "News"}, "post-with-slider.html", "Bill Maher & Macfarlene: ‘Serial Anti-Catholic Bigots’ - Catholic League", "h4 text-normal font-accent-2", 536, 411)
+          +post-meta()
+            div.element-groups-custom.veil.reveal-md-block
+              a(href="categories-grid.html").post-meta-author
+                | Brian Williamson
+              a(href="categories-grid.html").post-meta-time
+                time(datetime="2016-06-06") 2h ago
+        hr.divider.divider-dashed
+        //- Post-variant-1
+        +post-variant-1("images/sidebar-08.jpg", {"politics.html": "News"}, "post-with-audio.html", "Spotify aims to raise $500M in debt", "h4 text-normal font-accent-2", 536, 411)
+          +post-meta()
+            div.element-groups-custom.veil.reveal-md-block
+              a(href="categories-grid.html").post-meta-author
+                | Brian Williamson
+              a(href="categories-grid.html").post-meta-time
+                time(datetime="2016-06-06") 2h ago
+        hr.divider.divider-dashed.veil-sm.reveal-lg-block
+
+      .cell-sm-6.cell-lg-12.offset-lg-top-30
+        //- Post-variant-1
+        +post-variant-1("images/sidebar-09.jpg", {"politics.html": "News"}, "post-with-quote.html", "ICC Judges Start Investigations of Russian Aggressive War in Georgia in 2008", "h4 text-normal font-accent-2", 536, 411)
+          +post-meta()
+            div.element-groups-custom.veil.reveal-md-block
+              a(href="categories-grid.html").post-meta-author
+                | Brian Williamson
+              a(href="categories-grid.html").post-meta-time
+                time(datetime="2016-06-06") 2h ago
+        hr.divider.divider-dashed
+        //- Post-variant-1
+        +post-variant-1("images/sidebar-10.jpg", {"politics.html": "News"}, "post-with-quote-2.html", "Michael Bloomberg Weighs on Independent Run For POTUS", "h4 text-normal font-accent-2", 536, 411)
+          +post-meta()
+            div.element-groups-custom.veil.reveal-md-block
+              a(href="categories-grid.html").post-meta-author
+                | Brian Williamson
+              a(href="categories-grid.html").post-meta-time
+                time(datetime="2016-06-06") 2h ago
+
+  .cell-xs-12.cell-xs-push-5.cell-lg-push-5.offset-top-36
+    .heading-divider
+      h3.heading-italic.text-light Recent comments
+    .range.offset-top-0
+      .cell-sm-8.cell-sm-preffix-2.cell-lg-12.cell-lg-preffix-0
+        span.small.font-accent.text-italic
+          a(href="categories-grid.html") Brian Williamson
+          =' on'
+        h5
+          a(href="post-default.html").text-gray-base
+            | Bradley Cooper’s "Twin" Causes Madness At Sundance Film Festival Opening
+        hr.divider.divider-dashed
+        span.small.font-accent.text-italic
+          a(href="categories-grid.html") Brian Williamson
+          =' on'
+        h5
+          a(href="post-with-audio.html").text-gray-base
+            | 3 Ways To Conquer Your Winter Laziness
+        hr.divider.divider-dashed
+        span.small.font-accent.text-italic
+          a(href="categories-grid.html") Brian Williamson
+          =' on'
+        h5
+          a(href="post-with-video.html").text-gray-base
+            | Greeks were warned - stop refugees wave, or we will kick you out
+
+      .cell-sm-8.cell-sm-preffix-2.cell-lg-12.cell-lg-preffix-0.offset-top-36
+        .heading-divider
+          h3.heading-italic.text-light About Author
+        a(href="about-us.html")
+          img(src="images/sidebar-11.jpg", height="536", width="391",alt="")
+
+  .cell-xs-12.cell-xs-push-5.cell-lg-push-6.offset-top-36
+    .range.text-sm-left
+      .cell-sm-6.cell-lg-12
+        .heading-divider
+          h3.heading-italic.text-light Gallery
+          //- Gallery
+          .instafeed.sidebar-gallery(data-lightgallery="group", data-lg-thumbnail="false")
+            .range.range-ten
+              .cell-xs-5.cell-lg-2
+                a(href="images/index-gallery-01.jpg", data-lightgallery="item").thumbnail-variant-1
+                  img(src='images/index-gallery-01.jpg', alt='',  width='100', height='100')
+              .cell-xs-5.cell-lg-2
+                a(href="images/index-gallery-02.jpeg", data-lightgallery="item").thumbnail-variant-1
+                  img(src='images/index-gallery-02.jpeg', alt='',  width='100', height='100')
+              .cell-xs-5.cell-lg-2
+                a(href="images/index-gallery-03.jpg", data-lightgallery="item").thumbnail-variant-1
+                  img(src='images/index-gallery-03.jpg', alt='',  width='100', height='100')
+              .cell-xs-5.cell-lg-2
+                a(href="images/index-gallery-04.jpeg", data-lightgallery="item").thumbnail-variant-1
+                  img(src='images/index-gallery-04.jpeg', alt='',  width='100', height='100')
+              .cell-xs-5.cell-lg-2
+                a(href="images/index-gallery-05.jpeg", data-lightgallery="item").thumbnail-variant-1
+                  img(src='images/index-gallery-05.jpeg', alt='',  width='100', height='100')
+              .cell-xs-5.cell-lg-2
+                a(href="images/index-gallery-06.jpeg", data-lightgallery="item").thumbnail-variant-1
+                  img(src='images/index-gallery-06.jpeg', alt='',  width='100', height='100')
+              .cell-xs-5.cell-lg-2
+                a(href="images/index-gallery-07.jpeg", data-lightgallery="item").thumbnail-variant-1
+                  img(src='images/index-gallery-07.jpeg', alt='',  width='100', height='100')
+              .cell-xs-5.cell-lg-2
+                a(href="images/index-gallery-08.jpeg", data-lightgallery="item").thumbnail-variant-1
+                  img(src='images/index-gallery-08.jpeg', alt='',  width='100', height='100')
+              .cell-xs-5.cell-lg-2
+                a(href="images/index-gallery-09.jpeg", data-lightgallery="item").thumbnail-variant-1
+                  img(src='images/index-gallery-09.jpeg', alt='',  width='100', height='100')
+              .cell-xs-5.cell-lg-2
+                a(href="images/index-gallery-10.jpeg", data-lightgallery="item").thumbnail-variant-1
+                  img(src='images/index-gallery-10.jpeg', alt='',  width='100', height='100')
+
+
+
+      .cell-sm-6.cell-lg-12.offset-top-36.offset-sm-top-0.offset-lg-top-36
+        .heading-divider
+          h3.heading-italic.text-light Like Us On Facebook
+        #fb-root
+          .fb-root.fb-widget
+            //- Facebook Feed
+            .fb-page-responsive
+              .fb-page(data-href='https://www.facebook.com/TemplateMonster', data-tabs='timeline', data-height='350', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true')
+                .fb-xfbml-parse-ignore
+                  blockquote(cite='https://www.facebook.com/TemplateMonster')
+                    a(href='https://www.facebook.com/TemplateMonster') TemplateMonster
+
+        .heading-divider
+          h3.heading-italic.text-light Calendar
+        //- RD Calendar
+        .rd-calendar
+          .rdc-table
+            .rdc-panel.text-center.bg-gray-base.context-dark
+              .h5
+                .rdc-month.reveal-inline-block
+                span='  '
+                .rdc-fullyear.reveal-inline-block
+          .reveal-flex.range-xs-justify
+            a.rdc-prev
+            a.rdc-next
+

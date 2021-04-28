@@ -1,0 +1,20 @@
+include elements/_widget-list-social
+
+footer.page-footer.page-footer-variant-2
+  .shell.section-top-50
+    hr.divider.divider-lg.offset-0
+    include sections/_section-footer-01
+    hr.divider.divider-offset-top-52
+    .range.range-lg-justify.text-left.offset-top-36.text-center
+      .cell-lg-12
+        .brand.reveal-lg-inline-block
+          a.brand-name(href="./")
+            span king
+            ="news"
+      .cell-lg-12.offset-top-25
+
+        +list-social ('','','icon-default')
+      .cell-lg-12.offset-top-12
+        p.reveal-lg-inline-block.small
+          ='© 2016 News King, Inc. '
+          a(href="privacy.html") Privacy policy

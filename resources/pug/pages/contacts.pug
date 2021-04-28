@@ -1,0 +1,92 @@
+extends  ../_skeleton
+
+include ../elements/_ui_post-tags
+include ../elements/_ui_post-author
+include ../elements/_ui_post-prev-next
+include ../elements/_ui_comments
+include ../elements/_widget-list-social
+
+block variables
+  - var activeIndex = 9
+  - var rd_navbar_data_ajuster = {"data-stick-up-offset" : "198", "data-md-layout":'rd-navbar-fullwidth', "data-lg-layout":'rd-navbar-static'}
+
+block title
+  title Contacts
+
+block page
+  //- Page Header
+  include ../_header-default
+
+  //- Page Content
+  main.page-content
+    .shell
+      +breadcrambs(
+      'Contacts',
+      {
+        0: {
+          "title": "Home",
+          "href": "./"
+        },
+        1: {
+          "title": "Contacts"
+        }
+      }
+      )
+
+    section.section-top-26
+      .shell
+        .range.text-md-left
+          .cell-lg-8
+            .heading-divider
+              h2.heading-italic.text-light Contacts
+            ul.list-unstyled.list
+              li
+                span.text-medium
+                  ='General inquiries: '
+                a(href="mailto:contact@demolink.org").text-underline
+                  | contact@demolink.org
+              li
+                span.text-medium
+                  ='Media requests: '
+                a(href="mailto:media@demolink.org").text-underline
+                  | media@demolink.org
+              li
+                span.text-medium
+                  ='Editorial Board: '
+                a(href="mailto:info@demolink.org").text-underline
+                  | info@demolink.org
+
+            .heading-divider.offset-top-20
+              h2.heading-italic.text-light Please use the form below to send us your inquiry
+
+            p.text-light.text-italic
+            | Your email address will not be published. Required fields are marked
+            span.text-primary *
+
+            //- RD Mailform
+            form.rd-mailform.rd-mailform-gray-light-skin.offset-top-30(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              .form-wrap
+                label.form-label(for="contact-name") Your name *
+                input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+              .form-wrap
+                label.form-label(for="contact-email") E-Mail
+                input#contact-email.form-input(type="email" name="email" data-constraints='@Required @Email')
+              .form-wrap
+                label.form-label(for="your-website") Your Website
+                input#your-website.form-input(type="text" name="website" data-constraints='@Required')
+              .form-wrap
+                label.form-label(for="contact-message") Message
+                textarea#contact-message.form-input(name="message" data-constraints='@Required')
+
+
+              .offset-top-30.text-md-left
+                button.btn.btn-warning Send
+
+            //- Rd Mailform result field
+            .rd-mailform-validate
+
+          .cell-lg-4.offset-top-45.offset-lg-top-36
+            include ../elements/_ui_sidebar
+
+  //- Page Footer
+  include ../_footer-default

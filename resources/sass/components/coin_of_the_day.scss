@@ -1,0 +1,72 @@
+.coin-of-the-day {
+    font-family: "Noto Sans", sans-serif;
+
+    .boxes {
+        display: flex;
+        margin-bottom: 100px;
+
+        .box {
+            width: 100%;
+
+            &:first-child {
+                margin-right: 25px;
+            }
+
+            .table {
+                margin-bottom: 0;
+
+                th {
+                    font-size: 18px;
+                    border: none;
+                    background-color: #000;
+                    color: #fff;
+                    padding: 10px;
+
+                    a {
+                        display: block;
+                        float: left;
+
+                        .coin {
+                            width: 60px;
+                            text-align: center;
+                            margin: 0 10px 0 0;
+                        }
+                    }
+
+                    .name{
+                        display: inline;
+                        font-weight: 100;
+                    }
+
+                    span {
+                        font-size: 15px;
+                        margin-left: 15px;
+                        font-weight: 100;
+
+                        .top {
+                            color: green;
+                        }
+
+                        .bottom {
+                            color: red;
+                        }
+                    }
+                }
+
+                td {
+                    border: none;
+                    padding: 15px;
+                    line-height: 18px;
+                    background-color: #efefef;
+                    color: #000;
+                    font-size: 12px;
+                    font-weight: bold;
+
+                    span {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

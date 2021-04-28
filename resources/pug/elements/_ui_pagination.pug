@@ -1,0 +1,25 @@
+mixin pagination(prevLink, paginationsObj, nextLink)
+  ul.pagination
+    if (prevLink != '')
+      li.prev.veil.reveal-md-inline
+        a(href=prevLink) Prev
+    each paginationItem, index in paginationsObj
+      -var title
+      if(paginationItem.title)
+        -title = paginationItem.title
+      else
+        -title = index + 1
+      if(paginationItem.active)
+        li.active
+          a(href=paginationItem.link)= title
+      else
+        li
+          a(href=paginationItem.link)= title
+      -if(index == 4)
+        li
+          span
+            | ...
+
+    if (nextLink != '')
+      li.next.veil.reveal-md-inline
+        a(href=nextLink) Next

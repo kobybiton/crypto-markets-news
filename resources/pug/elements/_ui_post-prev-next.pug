@@ -1,0 +1,12 @@
+mixin post-prev-next(tagsObj)
+  .range.range-sm-justify.offset-top-30
+    .cell-sm-6.cell-xl-4.text-sm-left
+      .inset-left-30
+        .font-accent.small.text-italic Previous Post
+        .post-prev.h5.offset-top-5
+          a.text-gray-base(href=tagsObj[0].href)= tagsObj[0].title
+    .cell-sm-6.cell-xl-4.text-sm-right
+      .inset-right-30
+        .font-accent.small.text-italic Next Post
+        .post-next.h5.offset-top-5
+          a.text-gray-base(href=tagsObj[1].href)= tagsObj[1].title

@@ -1,0 +1,29 @@
+extends  ../_skeleton
+
+include ../elements/_ui-post-variant-1
+include ../elements/_ui-post-variant-2
+include ../elements/_ui-post-variant-3
+include ../elements/_ui-post-meta
+include ../elements/_ui_pagination
+
+block variables
+	- var activeIndex = 1
+	- var rd_navbar_data_ajuster = {"data-stick-up-offset" : "198", "data-md-layout":'rd-navbar-fullwidth', "data-lg-layout":'rd-navbar-static'}
+
+block title
+	title Home - KingNews
+
+block page
+	//- Page Header
+	include ../_header-default
+
+	//- Page Content
+	main.page-content
+		section.section-top-26
+			.shell
+				.range.text-md-left
+					.cell-lg-8
+						.rd-search-results
+	//- Page Footer
+	include ../_footer-default
+	//- {%FOOTER_LINK}

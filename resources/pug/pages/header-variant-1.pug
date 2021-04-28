@@ -1,0 +1,57 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 1
+  - var rd_navbar_data_ajuster = {"data-stick-up-offset" : "156", "data-md-layout":'rd-navbar-fullwidth', "data-lg-layout":'rd-navbar-static'}
+
+block title
+  title Header variant 1 - KingNews
+
+block page
+  //- Page Header
+  include ../_header-variant-1
+
+  //- Page Content
+  main.page-content
+    .shell
+      +breadcrambs(
+      'Header variant 1',
+      {
+        0: {
+          "title": "Home",
+          "href": "./"
+        },
+        1: {
+          "title": "Header variant 1"
+        }
+      },
+      'range-xs-center'
+      )
+
+    section.section-top-50
+      .shell
+        .range.text-left
+          .cell-lg-7.cell-lg-push-1
+            h1.text-gray-base "News King" Newspaper History - Delivering News for 106 Years and Counting
+
+            img.offset-top-45(src="images/about-01.jpg", width="983", height="755", alt="")
+
+            h4.offset-top-45.text-bold.text-normal.font-accent-2 "News King"
+            p.text-medium.offset-top-15 Our online newspaper delivers breaking news for more than 20 years, both in a printed version and here in our online magazine
+            h4.offset-top-45.text-bold.text-normal.font-accent-2  Founded in 1910
+            p.offset-top-15 The newspaper "NewsKing" has been founded way back in 1910, when William Howard Taft has been our nation's leader. Newspaper, originally intended to be kept as a weekly one and featured all the latest local news for Wisconsin area. But in next 30 years after that US nation's love both for Wisconsin cheese and our newspaper grew rapidly.
+            h4.offset-top-45.text-bold.text-normal.font-accent-2 Working nationwide since 1940
+            p.offset-top-15 So, following a widespread demand for our news editorials and also political satire and sketches, we went nationwide in 1940, and to being a daily paper. That was a ripe time for the news industry in general. Our war correspondents were present across all theaters of WW2, providing exclusive materials and our unique editorial style for Americans across the country.
+            h4.offset-top-45.text-bold.text-normal.font-accent-2 Digital news since 1995
+            p.offset-top-15 But the world did not stand idle, and we were about to go for another breakthrough and expansion. With commerical Internet going live in 1994, our newspaper editorial board decided that we should be one of the first papers to go live as well. So, we went ahead of the New York Times, Chicago Tribune and LA Herald, and in 1995 launched our Internet news portal.
+            p.text-medium This year we will be celebrating it's 21st birthday and our newspaper's 106th birthday.
+            p With such a long history behind us, we can surely tell that we are still in top-30 of newspapers in print, and rank at position #26 for the online news websites popularity, in US and Canada.
+            p.text-italic So, we think the journey we embarked on made a great transformation for our business in general and our readers in particular.
+          .cell-lg-1
+               +list-social('stuck-lg text-center','reveal-lg-block offset-lg-top-5','icon-gray-base')
+
+          .cell-lg-4.offset-top-45.offset-lg-top-0.cell-lg-push-2
+            include ../elements/_ui_sidebar-short
+
+  //- Page Footer
+  include ../_footer-default

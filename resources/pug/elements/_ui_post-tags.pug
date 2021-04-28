@@ -1,0 +1,11 @@
+mixin post-tags(tagsObj)
+  .post-meta
+    span.post-meta-tags Tagged in :
+      =' '
+      each tag, index in tagsObj
+        if tagsObj[parseInt(index) + 1]
+          span
+            a(href=tag.href)= tag.title + ', '
+        else
+          span
+            a(href=tag.href)= tag.title

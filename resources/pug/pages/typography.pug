@@ -1,0 +1,184 @@
+extends  ../_skeleton
+
+
+
+block variables
+  - var activeIndex = 1
+  - var rd_navbar_data_ajuster = {"data-stick-up-offset" : "198", "data-md-layout":'rd-navbar-fullwidth', "data-lg-layout":'rd-navbar-static'}
+
+block title
+  title Typography
+
+block page
+  //- Page Header
+  include ../_header-default
+
+  //- Page Content
+  main.page-content
+    .shell
+      +breadcrambs(
+        'Typography',
+        {
+          0: {
+            "title": "Home",
+            "href": "./"
+          },
+          1: {
+            "title": "Elements",
+            "href": "#"
+          },
+          2: {
+            "title": "Typography"
+          }
+        }
+      )
+
+    //- Typography
+    section.section-top-26
+      .shell
+        .range.text-md-left
+          .cell-md-8
+            .heading-divider.offset-bottom-0
+              h2 Typography
+            h1 H1 heading
+            p
+              | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama's 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+            h2.offset-top-36 H2 heading
+            p
+              | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama's 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+            h3.offset-top-36  H3 heading
+            p
+              | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama's 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+            h4.offset-top-36  H4 heading
+            p
+              | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama's 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+            h5.offset-top-36  H5 heading
+            p
+              | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama's 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+            h6.offset-top-45  H6 heading
+            p
+              | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama's 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+
+            //- Unordered list
+            .heading-divider
+              h2 Unordered list
+            p
+              | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama's 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+            ul.list-marked
+              li News
+              li Politics
+              li Business
+              li Sports
+              li Culture
+              li Tech
+              li Travel
+              li Videos
+
+            //- Ordered list
+            .heading-divider
+              h2 Ordered list
+            p
+              | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama's 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+            ol.list-unstyled
+              li News
+              li Politics
+              li Business
+              li Sports
+              li Culture
+              li Tech
+              li Travel
+              li Videos
+
+            //- Blockquotes
+            .heading-divider
+              h2 Blockquotes
+            p
+              | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama's 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+
+            blockquote.quote.quote-left.offset-top-36
+              p
+                q
+                  | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+              p
+                cite
+                  | Brian Williamson
+
+            .bg-gray-base.context-dark.offset-top-45.inset-p-right-15.inset-p-left-15.section-50.section-md-top-110.section-md-bottom-125
+              blockquote.quote.quote-centered
+                p
+                  q
+                    | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                p
+                  cite
+                    | Brian Williamson
+
+            //- Some other styles
+            .heading-divider
+              h2 Some other styles
+            p
+              | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama's 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+            ul.list-unstyled.list
+              li.text-medium
+                | Bold Text: Whether you found me on YouTube
+              li
+                span.text-medium
+                  ='Italic '
+                span.text-italic.text-light
+                  | Whether you found me on YouTube
+              li
+                span.text-medium
+                  ='Strike-through: '
+                span.text-strike
+                  | Whether you found me on YouTube
+              li
+                span.text-medium
+                  ='Link: '
+                a(href="#").text-underline
+                  | Whether you found me on YouTube
+              li
+                span.text-medium
+                  ='Inline Code: '
+                code
+                  | Whether you found me on YouTube
+            //- Centre aligned image
+            .heading-divider
+              h2 Centre aligned image
+            p.
+              When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with <span class="text-medium">a $787 billion stimulus law that was passed that same day</span>. Also, Mr. President talked foreign politics on that same occasion.
+            img.offset-top-25.center-block(alt="", src="images/typography-01.jpg").img-responsive
+            p.
+              When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with <span class="text-medium">a $787 billion stimulus law that was passed that same day</span>. Also, Mr. President talked foreign politics on that same occasion. He explained how well he will succeed in using diplomacy instead of Bush's warmongering, strengthen old alliances and, all in all, spruce up US international image to a better one. He said: “living our values doesn’t make us weaker, it makes us safer and it makes us stronger.” Even GOPers were approving of the path POTUS has undertaken then...at least of the rhetorics style, which he so Hollywood-esquely told it in.
+
+            //- Left aligned image
+            .heading-divider.offset-top-36
+              h2 Left aligned image
+            .range.offset-top-45
+              .cell-lg-6
+                img(alt="", src="images/typography-01.jpg").img-responsive.reveal-inline-block.reveal-md-inline-block
+              .cell-lg-6
+                p.
+                  When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with <span class="text-medium">a $787 billion stimulus law that was passed that same day</span>. Also, Mr. President talked foreign politics on that same occasion. When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+
+            //- Right aligned image
+            .heading-divider.offset-top-45
+              h2 Right aligned image
+            .range.offset-top-45
+              .cell-lg-push-1.cell-lg-6.text-md-right
+                img(alt="", src="images/typography-01.jpg").img-responsive.reveal-inline-block.reveal-md-inline-block
+              .cell-lg-6
+                p.
+                  When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with <span class="text-medium">a $787 billion stimulus law that was passed that same day</span>. Also, Mr. President talked foreign politics on that same occasion. When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day. Also, Mr. President talked foreign politics on that same occasion.
+
+            //- Large image should always fit
+            .heading-divider.offset-top-45
+              h2 Large image should always fit
+            .offset-top-45
+              p.
+                When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a $787 billion stimulus law that was passed that same day.
+              img(alt="", src="images/typography-02.jpg").offset-top-25.img-responsive
+              p.
+                Also, Mr. President talked foreign politics on that same occasion. When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with <span class="text-medium">a $787 billion stimulus law that was passed that same day</span>. Also, Mr. President talked foreign politics on that same occasion.
+
+
+  //- Page Footer
+  include ../_footer-default

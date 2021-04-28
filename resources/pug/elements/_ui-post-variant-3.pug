@@ -1,0 +1,15 @@
+mixin post-variant-3(image, imageWidth, imageHeight, categories, postLink, postTitle, postContent, titleClass)
+  .post.post-variant-3
+    .post-inner
+      img.post-image(src=image, width=imgWidth, height=imgHeight, alt="")
+      .post-caption
+        ul
+          each name, href in categories
+            li
+              a(href=href)
+                span.label.label-warning=name
+    div(class=titleClass)
+      a.post-link(href=postLink)= postTitle
+    -if(postContent !== '')
+      p= postContent
+    block

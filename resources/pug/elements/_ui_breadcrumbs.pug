@@ -1,0 +1,12 @@
+mixin breadcrambs(title, breadcrumbs, additionalRangeClass)
+  div.reveal-sm-flex.range-xs-middle.offset-top-12(class=additionalRangeClass)
+    h3.heading-italic.text-light= title
+    .divider-vertical.divider-xs.veil.reveal-sm-inline-block.offset-top-5
+    ol.breadcrumb
+      each link, index in breadcrumbs
+        if (breadcrumbs[parseInt(index) + 1] )
+          li
+            a(href=link.href)= link.title
+        else
+          li.active
+            = link.title

@@ -1,0 +1,190 @@
+extends  ../_skeleton
+
+include ../elements/_ui_post-tags
+include ../elements/_ui_post-author
+include ../elements/_ui_post-prev-next
+include ../elements/_ui_comments
+include ../elements/_widget-list-social
+
+block variables
+  - var activeIndex = 0
+  - var rd_navbar_data_ajuster = {"data-stick-up-offset" : "198", "data-md-layout":'rd-navbar-fullwidth', "data-lg-layout":'rd-navbar-static'}
+
+block title
+  title Post
+
+block page
+  //- Page Header
+  include ../_header-default
+
+  //- Page Content
+  main.page-content
+    .shell
+      +breadcrambs(
+      'Politics',
+      {
+        0: {
+          "title": "Home",
+          "href": "./"
+        },
+        1: {
+          "title": "News",
+          "href": "#"
+        },
+        2: {
+          "title": "Politics"
+        }
+      }
+      )
+
+    section.section-top-50
+      .shell
+        .range.text-md-left
+          .cell-lg-8
+            .range.range-lg-reverse
+              .cell-lg-11
+                .post.post-default.post-variant-3
+                  div.text-left
+                    a(href="politics.html")
+                      span.label.label-warning World
+                  .offset-top-12
+                    div.h1.text-gray-base
+                      a.post-link(href='#')
+                        | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                    div.post-meta.element-groups-custom.offset-top-12
+                      a(href="categories-list.html").post-meta-author
+                        | Brian Williamson
+                      a(href="categories-list.html").post-meta-time
+                        time(datetime="2016-06-06") 2h ago
+                      a(href="#comments").post-meta-comment 15 Comments
+                  p.offset-top-12
+                    | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a
+                    span.text-medium
+                      | $787 billion stimulus law that was passed that same day.
+                    | Also, Mr. President talked foreign politics on that same occasion. He explained how well he will succeed in using diplomacy instead of Bush's warmongering, strengthen old alliances and, all in all, spruce up US international image to a better one. He said:
+                    span.text-italic.text-light
+                      | "living our values doesn’t make us weaker, it makes us safer and it makes us stronger."
+                    | Even GOPers were approving of the path POTUS has undertaken then...at least of the rhetorics style, which he so Hollywood-esquely told it in.
+
+                  blockquote.quote.quote-left.offset-top-36
+                    p
+                      q
+                        | If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                    p
+                      cite
+                        | Brian Williamson
+
+                  p.offset-top-12
+                    | When people tell me that our President has delivered his 7th State of the Union speech recently, I always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession crisis. He tried to show what his personal vision for a path out was and why it was aligned with a
+                    span.text-medium
+                      | $787 billion stimulus law that was passed that same day.
+                    | Also, Mr. President talked foreign politics on that same occasion. He explained how well he will succeed in using diplomacy instead of Bush's warmongering, strengthen old alliances and, all in all, spruce up US international image to a better one. He said:
+                    span.text-italic.text-light
+                      | "living our values doesn’t make us weaker, it makes us safer and it makes us stronger."
+                    | Even GOPers were approving of the path POTUS has undertaken then...at least of the rhetorics style, which he so Hollywood-esquely told it in.
+
+                  +post-tags(
+                    {
+                      0: {
+                        "title": "Politics",
+                        "href": "politics.html"
+                      },
+                      1: {
+                        "title": "World",
+                        "href": "world.html"
+                      }
+                    }
+                  )
+
+                +post-author('images/post-04.jpg', 150, 150, 'categories-list.html', 'Brian Williamson', 'Our online newspaper delivers breaking news for more than 20 years, both in a printed version and here in our online magazine')
+              .cell-lg-1
+                +list-social ('stuck-lg','reveal-lg-block offset-lg-top-5','icon-gray-base')
+            hr.divider.offset-top-60
+
+            +post-prev-next(
+              {
+                0: {
+                  "title": 'Bradley Cooper’s "Twin" Causes Madness At Sundance Film Festival Opening',
+                  "href": "post-with-video.html"
+                },
+                1: {
+                  "title": "Michelle Obama Bags on the President, Says he was a `bum",
+                  "href": "post-with-audio.html"
+                }
+              }
+            )
+
+            +comments(
+              3,
+              [
+                {
+                  "img": 'images/comment-01.jpg',
+                  "imgWidth": '100',
+                  "imgHeight": '100',
+                  "author": {
+                    "link": "categories-list.html",
+                    "name": "Brian Williamson"
+                  },
+                  "time": '2h ago',
+                  "comment": 'I cannot agree more, as my brother went on to become a volunteer in Syria, fighting alongside Syrian moderate opposition versus Assad - and died. All because US did not stop Assad in 2011-2012.',
+                  "reply": [
+                    {
+                      "img": 'images/comment-02.jpg',
+                      "imgWidth": '100',
+                      "imgHeight": '100',
+                      "author": {
+                        "link": "categories-list.html",
+                        "name": "Sharon Walker"
+                      },
+                      "time": '2h ago',
+                      "comment": 'I also support the author. I expected the improvement of social and economic situation in our country. We will most likely remember Obama as an average president of the United States.'
+                    }
+                  ]
+                },
+
+                {
+                  "img": 'images/comment-03.jpg',
+                  "imgWidth": '100',
+                  "imgHeight": '100',
+                  "author": {
+                    "link": "categories-list.html",
+                    "name": "Brian Williamson"
+                  },
+                  "time": '2h ago',
+                  "comment": 'Would the current president be the one we hoped for? Maybe, but with his weakening of our international image, it became almost impossible to call the US a country with an unquestionable authority.',
+                  "reply": []
+                }
+              ]
+            )
+
+            .heading-divider#reply
+              h3.heading-italic.text-light Leave a Reply
+
+            p.text-light.text-italic
+            | Your email address will not be published. Required fields are marked
+            span.text-primary *
+
+
+            //- RD Mailform
+            form.rd-mailform.rd-mailform-gray-light-skin.offset-top-30(data-result-class='rd-mailform-validate', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              input(type='text', name='name', data-constraints='@NotEmpty', placeholder='Your name  *')
+              input(type='text', name='email', data-constraints='@NotEmpty @Email', placeholder='Your e-mail *')
+              input(type='text', name='name',placeholder='Your website')
+              textarea( name='message', data-constraints='@NotEmpty', placeholder='Comments  *')
+
+              .offset-top-30.text-md-left
+                button.btn.btn-warning Submit Comment
+
+            //- Rd Mailform result field
+            .rd-mailform-validate
+
+
+
+
+
+
+          .cell-lg-4.offset-top-45.offset-lg-top-0
+            include ../elements/_ui_sidebar
+
+  //- Page Footer
+  include ../_footer-default

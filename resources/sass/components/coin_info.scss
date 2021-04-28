@@ -1,0 +1,122 @@
+#coins_info_container{
+
+    #coins_info{
+
+        .box-wrapper{
+
+            .coin-list{
+                padding-bottom: 10px;
+
+                .boxes{
+
+                    .box{
+                        height: 160px;
+                        width: 130px;
+                        text-align: center;
+                        color: #000;
+                        float: left;
+
+                        img{
+                            position: relative;
+                            cursor: pointer;
+                            filter: saturate(50%);
+
+                            &:hover{
+                                filter: saturate(100%);
+                            }
+
+                            &:hover + p{
+                                color: #03ADE4;
+                            }
+                        }
+
+                        p {
+                            margin: 0;
+                            font-size: 13px;
+                            font-weight: bold;
+                        }
+
+                        img.active{
+                            filter: saturate(100%);
+                        }
+
+                        img.coin{
+                            margin-bottom: 25px;
+                            width: 100px;
+                        }
+
+                        p.active{
+                            color: #03ADE4;
+                        }
+                    }
+
+                    .table{
+                        width: 59%;
+                        margin: -20px 100px 0;
+                        margin-bottom: 0;
+                        z-index: 9999;
+                        position: absolute;
+                        left: 0;
+                        text-align: left;
+                        opacity: 0.9;
+                        font-weight: 600;
+
+                        th{
+                            font-size: 18px;
+                            border: none;
+                            background-color: #000;
+                            color: #fff;
+                            padding: 0.45rem;
+                            line-height: 18px;
+
+                            span{
+                                font-size: 10px;
+                            }
+
+                            span.close{
+                                float: right;
+                                margin-top: -23px;
+                                cursor: pointer;
+                                color: #fff;
+                                font-size: 15px;
+                                opacity: 1;
+                            }
+                        }
+
+                        th.th, td.td{
+                            border-right: 5px solid transparent;
+                        }
+
+                        tbody {
+
+                            tr {
+                                background-color: #efefef;
+                            }
+
+                            td.rowspan{
+                                width: 75%;
+                                font-size: 13px;
+                            }
+
+                            td{
+                                border: none;
+                                color: #000;
+                                padding: 0.45rem;
+                                line-height: 18px;
+
+                                span{
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .table:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

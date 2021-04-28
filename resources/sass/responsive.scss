@@ -1,0 +1,143 @@
+@media screen and (max-width: 1500px) {
+    .coin-of-the-day {
+
+        .boxes {
+            flex-direction: column;
+
+            .box {
+                margin-bottom: 50px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .market-cap {
+
+        .table-container {
+
+            .table {
+
+                thead {
+
+                    th {
+                        padding: 14px;
+                    }
+                }
+
+                tbody {
+
+                    td {
+                        padding: 14px;
+                    }
+                }
+            }
+
+            th:first-child, td:first-child, td:nth-child(n+5), th:nth-child(n+5) {
+                display: none;
+            }
+        }
+    }
+
+    .coin-of-the-day {
+
+        .boxes {
+
+            .box {
+                flex-direction: column;
+
+                a {
+
+                    .coin {
+                        margin: 0 auto 20px;
+
+                        img {
+                            top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .market-cap.table {
+
+        thead {
+
+            th {
+                font-size: 12px;
+            }
+        }
+
+        tbody {
+            height: 236px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .inner-page {
+
+        tbody {
+            height: 236px !important;
+            overflow-y: scroll !important;
+        }
+    }
+
+    #coins_info_container{
+
+        #coins_info{
+
+            .box-wrapper{
+
+                .coin-list{
+
+                    .boxes{
+                        height: 315px;
+                        overflow: scroll;
+                        margin-bottom: 15px;
+
+                        .box{
+                            float: none;
+                            margin: auto;
+
+                            p {
+                                font-size: 15px;
+                            }
+                        }
+
+                        .table{
+                            width: 100%;
+                            margin: 0;
+                            margin-bottom: 0;
+                            top: 390px;
+                            border-collapse: unset;
+
+                            th{
+                                font-size: 18px;
+                                border: none;
+                                background-color: #000;
+                                color: #fff;
+                                padding: 0.45rem;
+                                line-height: 18px;
+                            }
+
+                            td.rowspan, th:last-child {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
